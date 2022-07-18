@@ -25,7 +25,6 @@ video{
     height: 65vh;
     opacity: 0.3;
     background: #000000;
-    
     animation: animar 3s forwards;
     box-shadow:0px 0px 10px #EB0609;
 }
@@ -152,6 +151,7 @@ label>img:hover{
     display: flex;
     justify-items: center;
     align-items: center;
+    animation: FG 1s infinite;
     box-shadow: 0px 0px 15px #EB0609 ;
     border-radius: 30px
 }
@@ -187,18 +187,30 @@ iframe{
 }
 a>img{
     width: 70px;
-    
-    background: rgba(48, 45, 45, 0.61);
-    transition: transform .9s ;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.61);
-    
+    background: rgba(48, 45, 45, 0);
+    border-radius: 10px;    
 }
 
+@keyframes FG {
+    0% {
+        box-shadow: 0px 0px 20px  #EB0609;
+    }
+    25%{
+        box-shadow: 0px 0px 25px #EB0609; 
+    }
+    50%{
+        box-shadow: 0px 0px 30px #EB0609;
+       }
+    75%{
+        box-shadow: 0px 0px 25px #EB0609; 
+    }
+    100%{
+        box-shadow: 0px 0px 20px  #EB0609; 
+    }
+}
 
 a>img:hover{
     transform: scale(1.3);
-    background:  rgba(36, 34, 34, 0.74);
-    box-shadow: 0px 0px 10px #08FC11;
 }
 iframe{
     border-radius: 30px 0px 30px 0px;
@@ -207,4 +219,41 @@ iframe{
 }
 iframe:hover{
     box-shadow: 0px 0px 30px #EB0609;
+}
+.Belgo img{
+    display: none;
+}
+
+@media only screen and (max-width:700px){
+    body{
+        position:absolute;
+        height: 68px;
+        background: #000000;
+        display: flex;
+        box-shadow:0px 0px 80px #EB0609;
+    }
+    .Belgo img{
+        display:flex;
+        position: relative;
+        top: -15px;
+        left: 0px;
+        height: 83px;
+        width:99px;
+    }
+    .main{
+        display: none;
+    }
+    nav{
+        top:80px;
+    }
+    
+    .VI{display: none;
+        }
+    .babi a{
+        display: none;
+    }
+    label img{
+        top:10px;
+        width: 14%;
+    }
 }
